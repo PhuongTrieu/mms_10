@@ -4,6 +4,16 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
       <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :birthday %><br />
+        <%= f.date_select :birthday, start_year: 1950  %>
+      </div>
+
+      <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
@@ -21,11 +31,14 @@
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
+      <div class="field">
+        <%= f.check_box :is_admin %>
+        <%= f.label "Is admin" %>
+      </div>
+
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>
