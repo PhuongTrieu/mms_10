@@ -20,4 +20,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: "Framgia MMS"
+  home: "Home"
+  help: "Help"
+  about: "About"
+  login: "Login"
+  logout: "Logout"
+  signup: "Signup"
+  user: "User"
+  admin: "Admin"
+  view_profile: "View profile"
+  edit_profile: "Edit profile"
+  back: "Back"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  yas: "You are sure?"
+  please_login: "Please login!"
+  dashboard:
+    welcome: "Welcome to Admin Control Page"
+  skill:
+    skill: "Skill"
+    create: "Create new skill"
+    success: "Create skill successfully!"
+    list: "Listing Skills"
+    new: "New Skill"

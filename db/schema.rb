@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610063245) do
+ActiveRecord::Schema.define(version: 20150610075303) do
+
+  create_table "skills", force: :cascade do |t|
+    t.integer  "user_skill_id", limit: 4
+    t.string   "name",          limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "skills", ["user_skill_id"], name: "index_skills_on_user_skill_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   limit: 255, default: "", null: false
