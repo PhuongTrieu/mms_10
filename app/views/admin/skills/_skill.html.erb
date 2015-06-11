@@ -1,0 +1,6 @@
+<tr>
+  <td><%= skill.name %></td>
+  <td><%= link_to t("edit"), edit_admin_skill_path(skill) %></td>
+  <td><%= link_to t("destroy"), admin_skill_path(skill),
+    method: :delete, data: {confirm: t("yas")} %></td>
+</tr>

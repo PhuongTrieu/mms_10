@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails",                "4.2.1"
+gem "rails_config"
 gem "bcrypt",               "3.1.7"
 gem "faker",                "1.4.2"
 gem "will_paginate",        "3.0.7"
@@ -22,7 +23,7 @@ group :test do
 end
 
 group :development, :test do
-  gem "mysql2"      
+  gem "mysql2"
   gem "byebug",      "3.4.0"
   gem "web-console", "2.0.0.beta3"
   gem "factory_girl_rails"
