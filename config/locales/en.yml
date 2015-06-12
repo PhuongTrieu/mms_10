@@ -35,6 +35,7 @@ en:
   show: "Show"
   edit: "Edit"
   destroy: "Destroy"
+  submit: "Submit"
   yas: "You are sure?"
   please_login: "Please login!"
   dashboard:
@@ -42,6 +43,10 @@ en:
   skill:
     skill: "Skill"
     create: "Create new skill"
-    success: "Create skill successfully!"
     list: "Listing Skills"
     new: "New Skill"
+    edit: "Edit Skill"
+    delete: "Delete Skill"
+    created: "Create skill successfully!"
+    updated: "Update skill successfully!"
+    deleted: "Delete skill successfully!"
