@@ -1,6 +1,10 @@
 <tr>
-  <td><%= skill.name %></td>
-  <td><%= link_to t("edit"), edit_admin_skill_path(skill) %></td>
-  <td><%= link_to t("destroy"), admin_skill_path(skill),
-    method: :delete, data: {confirm: t("yas")} %></td>
+  <td><%= link_to skill.name, admin_skill_path(skill) %></td>
+  <td><%= skill.created_at %></td>
+  <td><%= link_to "", edit_admin_skill_path(skill),
+              class: "glyphicon glyphicon-edit" %>
+      <%= link_to "", admin_skill_path(skill), method: :delete,
+              data: {confirm: t("yas")},
+              class: "glyphicon glyphicon-trash" %>
+  </td>
 </tr>
