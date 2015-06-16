@@ -1,0 +1,22 @@
+<h1><%= t "user.list" %></h1>
+
+<button>
+  <%= link_to t("user.new"), new_admin_user_path, class: "glyphicon glyphicon-plus" %>
+</button>
+<%= will_paginate %>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t "user.name" %></th>
+        <th><%= t "user.email" %></th>
+        <th><%= t "team.team" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate %>

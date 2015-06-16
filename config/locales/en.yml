@@ -22,13 +22,19 @@
 en:
   admin_login: "Please login as ADMIN!"
   title: "Framgia MMS"
+  admin_title: "Admin panel"
   home: "Home"
   help: "Help"
   about: "About"
   login: "Login"
   logout: "Logout"
   signup: "Signup"
-  user: "User"
+  user:
+    user: "User"
+    new: "New User"
+    list: "Listing Users"
+    name: "Name"
+    email: "Email"
   admin: "Admin"
   view_profile: "View profile"
   edit_profile: "Edit profile"
@@ -42,7 +48,7 @@ en:
   dashboard:
     welcome: "Welcome to Admin Control Page"
   skill:
-    skill: "Skill"
+    skill: "All skills"
     create: "Create new skill"
     list: "Listing Skills"
     new: "New Skill"
@@ -51,3 +57,20 @@ en:
     created: "Create skill successfully!"
     updated: "Update skill successfully!"
     deleted: "Delete skill successfully!"
+  team:
+    team: "Team"
+    create: "Create new team"
+    list: "Listing teams"
+  position:
+    position: "Position"
+    create: "Create new position"
+    list: "Listing positions"
+  project:
+    project: "Project"
+    create: "Create new project"
+    list: "Listing projects"
+  csv:
+    csv: "CSV file"
+    import: "Import from CSV"
+    export: "Export to CSV"
+  action: "Action"

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users
 
   namespace :admin do
-    root "dashboard#show"
-    resources :skills
+    root "users#index"
+    resources :skills, :users
   end
 end
