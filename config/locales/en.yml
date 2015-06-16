@@ -41,6 +41,7 @@ en:
     create: "Create new user"
     created: "Create user successfully!"
     create_fail: "Invalid information of user!"
+    deleted: "Delete user successfully!"
     is_admin: "Is admin"
   admin: "Admin"
   view_profile: "View profile"
