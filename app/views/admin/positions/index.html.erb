@@ -1,0 +1,22 @@
+<h1><%= t "position.list" %></h1>
+
+<button>
+  <%= link_to t("position.new"), new_admin_position_path, class: "glyphicon glyphicon-plus" %>
+</button>
+<%= will_paginate %>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t "position.id" %></th>
+        <th><%= t "position.name" %></th>
+        <th><%= t "position.abbreviation" %></th>
+        <th><%= t "action" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @positions %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate %>
