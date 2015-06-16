@@ -1,0 +1,21 @@
+<h1><%= t "skill.list" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user do |f| %>
+      <div class="row">
+        <table class="table">
+          <%= f.collection_check_boxes :skill_ids, Skill.all, :id, :name do |b| %>
+            <tr>
+              <%= b.label do %>
+                <th class="selection_checkbox"><%= b.check_box  %></th>
+                <th><%= b.text %></th>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      <%= f.submit t("submit"), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    <br>
+  </div>
+</div>

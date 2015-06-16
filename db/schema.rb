@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20150616011306) do
 
+  create_table "skill_users", force: :cascade do |t|
+    t.integer  "level",      limit: 4
+    t.integer  "used_years", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.integer  "skill_id",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "skill_users", ["skill_id"], name: "index_skill_users_on_skill_id", using: :btree
+
   create_table "skills", force: :cascade do |t|
     t.integer  "user_skill_id", limit: 4
     t.string   "name",          limit: 255
