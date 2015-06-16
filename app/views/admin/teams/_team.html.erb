@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to team.name, admin_team_path(team) %></td>
+  <td><%= team.created_at %></td>
+  <td><%= link_to "", edit_admin_team_path(team),
+              class: "glyphicon glyphicon-edit" %>
+      <%= link_to "", admin_team_path(team), method: :delete,
+              data: {confirm: t("yas")},
+              class: "glyphicon glyphicon-trash" %>
+  </td>
+</tr>

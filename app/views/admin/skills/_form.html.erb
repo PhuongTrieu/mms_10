@@ -1,8 +1,8 @@
 <%= form_for [:admin, @skill] do |f| %>
-  <%= render "shared/skill_error_messages" %>
+  <%= render "shared/error_messages", object: f.object %>
   <div class="fields">
     <%= f.label :name %><br>
-    <%= f.text_area :name, class: "form-control" %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
 
   <div class="actions">
