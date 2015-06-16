@@ -1,7 +1,7 @@
-<h1><%= t "skill.list" %></h1>
+<h1><%= t "team.list" %></h1>
 
-<%= link_to t("skill.new"), new_admin_skill_path,
-                            class: "glyphicon glyphicon-plus" %>
+<%= link_to t("team.new"), new_admin_team_path,
+  class: "glyphicon glyphicon-plus" %>
 <%= will_paginate %>
 <div class="table-responsive">
   <table class="table">
@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <%= render @skills %>
+      <%= render @teams %>
     </tbody>
   </table>
 </div>

@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  name: "Name"
+  time: "Created At"
+  tool: "Modified"
   admin_login: "Please login as ADMIN!"
   title: "Framgia MMS"
   admin_title: "Admin panel"
@@ -29,12 +32,7 @@ en:
   login: "Login"
   logout: "Logout"
   signup: "Signup"
-  user:
-    user: "User"
-    new: "New User"
-    list: "Listing Users"
-    name: "Name"
-    email: "Email"
+  user: "Users Manage"
   admin: "Admin"
   view_profile: "View profile"
   edit_profile: "Edit profile"
@@ -43,12 +41,12 @@ en:
   edit: "Edit"
   destroy: "Destroy"
   submit: "Submit"
-  yas: "You are sure?"
+  yas: "Are you sure?"
   please_login: "Please login!"
   dashboard:
     welcome: "Welcome to Admin Control Page"
   skill:
-    skill: "All skills"
+    skill: "Skills Manage"
     create: "Create new skill"
     list: "Listing Skills"
     new: "New Skill"
@@ -57,10 +55,6 @@ en:
     created: "Create skill successfully!"
     updated: "Update skill successfully!"
     deleted: "Delete skill successfully!"
-  team:
-    team: "Team"
-    create: "Create new team"
-    list: "Listing teams"
   position:
     position: "Position"
     create: "Create new position"
@@ -74,3 +68,15 @@ en:
     import: "Import from CSV"
     export: "Export to CSV"
   action: "Action"
+  team:
+    team: "Teams Manage"
+    create: "Create new team"
+    list: "Listing Teams"
+    new: "New Team"
+    edit: "Edit Team"
+    delete: "Delete Team"
+    created: "Create team successfully!"
+    updated: "Update team successfully!"
+    deleted: "Delete team successfully!"
+  error_alert: "The form contains"
+  error: "error(s)"
