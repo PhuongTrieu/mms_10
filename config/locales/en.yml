@@ -53,10 +53,13 @@ en:
   submit: "Submit"
   yas: "Are you sure?"
   please_login: "Please login!"
-  dashboard:
-    welcome: "Welcome to Admin Control Page"
+  user:
+    user: "User"
+    welcome: "Welcome to User Control Page"
+
   skill:
     skill: "Skills Manage"
+    add: "Add new Skill"
     create: "Create new skill"
     list: "Listing Skills"
     new: "New Skill"

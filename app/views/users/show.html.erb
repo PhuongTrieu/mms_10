@@ -1,0 +1,10 @@
+<h1><%= t "user.welcome" %></h1>
+<h2><%= t "skill.list" %></h2>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% @user.skills.each do |skill| %>
+      <li><%= skill.name %></li>
+    <% end %>
+    <%= link_to t("skill.add"), user_add_skills_path(@user) %>
+  </div>
+</div>
