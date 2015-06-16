@@ -1,0 +1,42 @@
+<h2><%= t "user.new" %></h2>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render "shared/error_messages", object: @user %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :birthday %><br />
+        <%= f.date_select :birthday, start_year: 1950  %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.check_box :is_admin %>
+        <%= f.label t("user.is_admin") %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t("user.create") %>
+      </div>
+    <% end %>
+  </div>
+</div>
