@@ -35,6 +35,7 @@ en:
   user:
     user: "User Manage"
     new: "New User"
+    welcome: "Welcome to User Control Page"
     list: "Listing Users"
     name: "Name"
     email: "Email"
@@ -53,10 +54,6 @@ en:
   submit: "Submit"
   yas: "Are you sure?"
   please_login: "Please login!"
-  user:
-    user: "User"
-    welcome: "Welcome to User Control Page"
-
   skill:
     skill: "Skills Manage"
     add: "Add new Skill"
@@ -69,9 +66,16 @@ en:
     updated: "Update skill successfully!"
     deleted: "Delete skill successfully!"
   position:
-    position: "Position"
+    position: "Positions Manage"
+    new: "New position"
     create: "Create new position"
     list: "Listing positions"
+    create: "Create new position"
+    created: "Create position successfully!"
+    deleted: "Delete position successfully!"
+    name: "Name"
+    abbreviation: "Abbreviation"
+    id: "ID"
   project:
     project: "Project"
     create: "Create new project"
@@ -93,3 +97,4 @@ en:
     deleted: "Delete team successfully!"
   error_alert: "The form contains"
   error: "error"
+  order: "Order"

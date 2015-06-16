@@ -1,0 +1,14 @@
+<%= form_for [:admin, @position] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="fields">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label :abbreviation %>
+     <%= f.text_field :abbreviation, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t("position.create"), class: "btn btn-primary" %>
+  </div>
+<% end %>

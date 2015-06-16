@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616011306) do
+ActiveRecord::Schema.define(version: 20150616062208) do
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.text     "abbreviation", limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "skill_users", force: :cascade do |t|
     t.integer  "level",      limit: 4
