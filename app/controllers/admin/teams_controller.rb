@@ -6,6 +6,10 @@ class Admin::TeamsController < ApplicationController
                            per_page: Settings.number_per_page
   end
 
+  def show
+    @team = Team.find params[:id]
+  end
+
   def new
     @team = Team.new
   end
@@ -27,8 +31,11 @@ class Admin::TeamsController < ApplicationController
   def update
     @team = Team.find params[:id]
     if @team.update_attributes team_params
-      flash[:succes] = t "team.updated"
-      redirect_to admin_teams_path
+      flash[:success] = t "team.updated"
+      respond_to do |format|
+        format.html {redirect_to admin_team_path(@team)}
+        format.js
+      end
     else
       render :edit
     end
@@ -36,12 +43,12 @@ class Admin::TeamsController < ApplicationController
 
   def destroy
     Team.find(params[:id]).destroy
-    flash[:succes] = t "team.deleted"
+    flash[:success] = t "team.deleted"
     redirect_to admin_teams_path
   end
 
   private
   def team_params
-    params.require(:team).permit :name, :description
+    params.require(:team).permit :name, :description, :team_id, user_ids: []
   end
 end

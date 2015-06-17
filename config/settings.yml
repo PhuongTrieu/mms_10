@@ -7,3 +7,11 @@ level:
   level3: "3"
   level4: "4"
   level5: "5"
+sql:
+  user:
+    team_users:
+      SELECT * FROM users WHERE users.id
+                    NOT IN (SELECT team_users.user_id FROM team_users);
+    team_users_scope:
+      users.id NOT IN (SELECT team_users.user_id
+                    FROM team_users)

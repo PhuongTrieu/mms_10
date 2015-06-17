@@ -1,0 +1,27 @@
+<div class="col-md-4" id="team-detail">
+  <h3><%= @team.name %></h3>
+  <p><%= t("team.created_at") %> <%= @team.created_at %></p>
+  <p><%= t("team.description") %> <%= @team.description %></p>
+  <p><%= link_to t(:edit), edit_admin_team_path(@team) %></p>
+  <h4><%= t("team.users") %></h4>
+  <ul class="jumbotron">
+    <div id="team_users">
+      <%= render "shared/users_in_team" %>
+    </div>
+  </ul>
+  <%= link_to t(:back), :back %>
+</div>
+<div class="col-md-8" id="add-users-content">
+<h3><%= t("team.add_users") %></h3>
+<div class="col-md-6 col-md-offset-3">
+  <%= form_for [:admin, @team] do |builder| %>
+    <table class="table">
+      <tbody>
+        <%= render "shared/users_in_team_form", f: builder %>
+        <%= render "shared/team_add_users_form", f: builder %>
+      </tbody>
+    </table>
+    <%= builder.submit t("submit"), class: "btn btn-primary",
+                                    id: "add-users-btn"%>
+  <% end %>
+</div>
