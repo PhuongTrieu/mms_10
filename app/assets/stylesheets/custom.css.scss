@@ -283,3 +283,29 @@ aside {
 a:hover {
   text-decoration: none;
 }
+
+#add-users-content {
+  tr {
+    width: 100%;
+    display: inline-table;
+  }
+
+  table {
+   height: 350px;
+  }
+
+  tbody {
+    overflow-y: scroll;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+  }
+
+  .selection_checkbox {
+    width: 40px;
+  }
+}
+
+#team-detail {
+  border-right: 1px solid;
+}

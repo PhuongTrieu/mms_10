@@ -7,5 +7,10 @@ class User < ActiveRecord::Base
   has_many :skill_users, dependent: :destroy
   has_many :skills, through: :skill_users
 
+  has_many :team_users
+  has_many :teams, through: :team_users
+
   accepts_nested_attributes_for :skill_users, allow_destroy: true
+
+  scope :users_not_in_team, ->{where(Settings.sql.user.team_users_scope)}
 end

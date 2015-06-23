@@ -1,0 +1,9 @@
+<%= f.collection_check_boxes :user_ids, f.object.users,
+                             :id, :name do |b| %>
+  <tr>
+    <%= b.label do %>
+      <td><%= b.text %></td>
+      <td class="selection_checkbox"><%= b.check_box %></td>
+    <% end %>
+  </tr>
+<% end %>

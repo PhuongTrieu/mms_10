@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(version: 20150616062208) do
     t.datetime "updated_at",             null: false
   end
 
+  add_index "skills", ["user_skill_id"], name: "index_skills_on_user_skill_id", using: :btree
+
+  create_table "team_users", force: :cascade do |t|
+    t.integer  "team_id",    limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.integer  "leader_id",   limit: 4
     t.string   "description", limit: 255
