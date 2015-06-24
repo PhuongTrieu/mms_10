@@ -1,0 +1,14 @@
+<%= form_for [:admin, @team] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="fields">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %><br>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 4 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t(:submit), class: "btn btn-primary" %>
+  </div>
+<% end %>
