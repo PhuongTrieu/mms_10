@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to project.name, admin_project_path(project) %></td>
+  <td><%= project.created_at %></td>
+  <td><%= link_to "", edit_admin_project_path(project),
+              class: "glyphicon glyphicon-edit" %>
+      <%= link_to "", admin_project_path(project), method: :delete,
+              data: {confirm: t("ays")},
+              class: "glyphicon glyphicon-trash" %>
+  </td>
+</tr>
