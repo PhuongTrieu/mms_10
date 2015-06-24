@@ -1,4 +1,11 @@
 class Admin::ProjectsController < ApplicationController
+  before_action :admin_user
+
+  def index
+    @projects = Project.paginate page: params[:page],
+                                 per_page: Settings.number_per_page
+  end
+
   def new
     @project = Project.new
     @teams = Team.all.pluck :name, :id
