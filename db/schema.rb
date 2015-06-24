@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616062208) do
+ActiveRecord::Schema.define(version: 20150624065306) do
 
   create_table "positions", force: :cascade do |t|
     t.string   "name",         limit: 255
     t.text     "abbreviation", limit: 65535
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "team_id",      limit: 4
+    t.string   "name",         limit: 255
+    t.string   "abbreviation", limit: 255
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "skill_users", force: :cascade do |t|
@@ -36,8 +46,6 @@ ActiveRecord::Schema.define(version: 20150616062208) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
-
-  add_index "skills", ["user_skill_id"], name: "index_skills_on_user_skill_id", using: :btree
 
   create_table "team_users", force: :cascade do |t|
     t.integer  "team_id",    limit: 4
