@@ -13,7 +13,7 @@
     <%= f.label :end_date %>
     <%= f.date_select :end_date, start_year: 1990 %>
 
-    <%= f.label :team_id, t("team.choose_leader") %>
+    <%= f.label :team_id, t("team.choose_team") %>
     <%= f.select :team_id, options_for_select(@teams) %>
   </div>
 
