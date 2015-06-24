@@ -1,0 +1,23 @@
+<%= form_for [:admin, @project] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="fields">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %><br>
+
+    <%= f.label :abbreviation %>
+    <%= f.text_area :abbreviation, rows: 2 %>
+
+    <%= f.label :start_date %>
+    <%= f.date_select :start_date, start_year: 1990 %>
+
+    <%= f.label :end_date %>
+    <%= f.date_select :end_date, start_year: 1990 %>
+
+    <%= f.label :team_id, t("team.choose_leader") %>
+    <%= f.select :team_id, options_for_select(@teams) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t(:submit), class: "btn btn-primary" %>
+  </div>
+<% end %>

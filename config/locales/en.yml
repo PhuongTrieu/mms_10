@@ -84,6 +84,13 @@ en:
     project: "Project"
     create: "Create new project"
     list: "Listing projects"
+    created_at: "Created at:"
+    new: "New Project"
+    edit: "Edit Project"
+    delete: "Delete Project"
+    created: "Create Project successfully!"
+    updated: "Update Project successfully!"
+    deleted: "Delete Project successfully!"
   csv:
     csv: "CSV file"
     import: "Import from CSV"
