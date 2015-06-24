@@ -8,6 +8,7 @@ class Admin::TeamsController < ApplicationController
 
   def show
     @team = Team.find params[:id]
+    @leader = @team.leader
   end
 
   def new
@@ -26,6 +27,7 @@ class Admin::TeamsController < ApplicationController
 
   def edit
     @team = Team.find params[:id]
+    @leader = @team.users.pluck :name, :id
   end
 
   def update
@@ -49,6 +51,7 @@ class Admin::TeamsController < ApplicationController
 
   private
   def team_params
-    params.require(:team).permit :name, :description, :team_id, user_ids: []
+    params.require(:team).permit :name, :description, :leader_id,
+                                 :team_id, user_ids: []
   end
 end

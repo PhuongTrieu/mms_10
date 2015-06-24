@@ -90,6 +90,8 @@ en:
     export: "Export to CSV"
   action: "Action"
   team:
+    choose_leader: "Choose Leader"
+    leader_member: "Leader:"
     users: "Users"
     add_users: "Add Users"
     created_at: "Created at:"

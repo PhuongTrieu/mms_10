@@ -3,8 +3,12 @@
   <div class="fields">
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %><br>
+
     <%= f.label :description %>
     <%= f.text_area :description, rows: 4 %>
+
+    <%= f.label :leader_id, t("team.choose_leader") %>
+    <%= f.select :leader_id, options_for_select(@leader) %>
   </div>
 
   <div class="actions">
