@@ -1,0 +1,13 @@
+<div class="col-md-8" id="add-users-content">
+<h3><%= t "project.add_users" %></h3>
+<div class="col-md-6 col-md-offset-3">
+  <%= form_for [:admin, @project] do |builder| %>
+    <table class="table">
+      <tbody>
+        <%= render "shared/project_add_users_form", f: builder %>
+      </tbody>
+    </table>
+    <%= builder.submit t("submit"), class: "btn btn-primary",
+                                    id: "add-users-btn"%>
+  <% end %>
+</div>
