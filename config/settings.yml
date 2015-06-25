@@ -17,3 +17,7 @@ sql:
                     FROM team_users)
     normal_users:
       users.is_admin IS NOT true
+activities:
+  create: "Admin create"
+  update: "Admin update"
+  destroy: "Admin destroy"
