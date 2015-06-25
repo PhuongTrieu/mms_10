@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include ActivityLogs
+  extend CsvExport
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
