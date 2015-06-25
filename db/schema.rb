@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624065306) do
+ActiveRecord::Schema.define(version: 20150625082626) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "action",      limit: 255
+    t.string   "object",      limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "positions", force: :cascade do |t|
     t.string   "name",         limit: 255
     t.text     "abbreviation", limit: 65535
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "project_users", force: :cascade do |t|
+    t.integer  "project_id", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -28,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150624065306) do
     t.datetime "end_date"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "leader_id",    limit: 4
   end
 
   create_table "skill_users", force: :cascade do |t|

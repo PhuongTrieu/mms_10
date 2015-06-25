@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  include ActivityLogs
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -16,4 +16,21 @@ class User < ActiveRecord::Base
 
   scope :users_not_in_team, ->{where Settings.sql.user.team_users_scope}
   scope :normal_users, ->{where Settings.sql.user.normal_users}
+
+  after_create :log_create
+  after_update :log_update
+  after_destroy :log_destroy
+
+  private
+  def log_create
+    create_activity_log Settings.activities.create, self.class.name
+  end
+
+  def log_update
+    create_activity_log Settings.activities.update, self.class.name
+  end
+
+  def log_destroy
+    create_activity_log Settings.activities.destroy, self.class.name
+  end
 end
