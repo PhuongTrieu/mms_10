@@ -1,5 +1,6 @@
 class Position < ActiveRecord::Base
   include ActivityLogs
+  extend CsvExport
 
   belongs_to :user
 
