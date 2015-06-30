@@ -18,7 +18,8 @@ gem "sdoc",                 "0.4.0", group: :doc
 
 group :test do
   gem "rspec-rails"
-  gem "shoulda-matchers", require: false
+  gem "shoulda-matchers"
+  gem "rspec-collection_matchers"
   gem "foundation-rails"
 end
 
