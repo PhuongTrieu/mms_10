@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   has_many :team_users
   has_many :teams, through: :team_users
 
+  has_many :project_users
+  has_many :projects, through: :project_users
+
   has_one :leader
 
   accepts_nested_attributes_for :skill_users, allow_destroy: true

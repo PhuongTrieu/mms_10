@@ -6,6 +6,13 @@ class Admin::ProjectsController < ApplicationController
                                  per_page: Settings.number_per_page
   end
 
+  def show
+    @project = Project.find params[:id]
+    @leader = @project.leader
+    @team = Team.find @project.team_id
+    @project_users = @project.users.pluck :name, :id
+  end
+
   def new
     @project = Project.new
     @teams = Team.all.pluck :name, :id
@@ -28,8 +35,7 @@ class Admin::ProjectsController < ApplicationController
 
   def update
     @project = Project.find params[:id]
-    if @project.save
-      flash[:success] = t "project.updated"
+    if @project.update_attributes project_params
       redirect_to admin_project_path(@project)
     else
       render :edit
@@ -45,6 +51,7 @@ class Admin::ProjectsController < ApplicationController
   private
   def project_params
     params.require(:project).permit :name, :abbreviation, :team_id,
-                                    :start_date, :end_date
+                                    :leader_id,:start_date, :end_date,
+                                    user_ids: []
   end
 end

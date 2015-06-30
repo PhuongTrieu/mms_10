@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  add_users_first: "Add members first!"
   name: "Name"
   time: "Created At"
   tool: "Modified"
@@ -81,6 +82,12 @@ en:
     abbreviation: "Abbreviation"
     id: "ID"
   project:
+    abbreviation: "Abbreviation:"
+    choose_leader: "Choose Leader"
+    choose_team: "Choose Team"
+    leader_member: "Leader member:"
+    users: "Users"
+    add_users: "Add Users"
     project: "Project"
     create: "Create new project"
     list: "Listing projects"
@@ -88,6 +95,8 @@ en:
     new: "New Project"
     edit: "Edit Project"
     delete: "Delete Project"
+    start_date: "Start date:"
+    end_date: "End date:"
     created: "Create Project successfully!"
     updated: "Update Project successfully!"
     deleted: "Delete Project successfully!"

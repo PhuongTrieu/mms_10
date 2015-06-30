@@ -1,0 +1,36 @@
+<button type="button" class="btn btn-info btn-sm"
+    data-toggle="modal" data-target="#myModal">
+  <%= t "project.choose_leader" %>
+</button>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="modal-title">
+          <%= t "project.choose_leader" %>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for [:admin, @project] do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+          <div class="fields">
+            <%= f.label :leader_id, t("team.choose_leader") %>
+            <%= f.select :leader_id, options_for_select(@project_users) %>
+          </div>
+          <div class="actions">
+            <%= f.submit t(:submit), class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"
+            data-dismiss="modal">
+          <%= t "close" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
