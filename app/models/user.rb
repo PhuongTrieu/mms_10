@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
   has_many :project_users
   has_many :projects, through: :project_users
 
-  has_one :leader
+  has_one :leader, class_name: "Team", foreign_key: "leader_id"
+  has_one :leader_project, class_name: "Project", foreign_key: "leader_id"
 
   accepts_nested_attributes_for :skill_users, allow_destroy: true
 

@@ -8,7 +8,7 @@ class Admin::ProjectsController < ApplicationController
 
   def show
     @project = Project.find params[:id]
-    @leader = @project.leader
+    @leader = @project.leader_project
     @team = Team.find @project.team_id
     @project_users = @project.users.pluck :name, :id
   end
