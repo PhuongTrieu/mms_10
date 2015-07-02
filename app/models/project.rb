@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   include ActivityLogs
 
-  belongs_to :leader, class_name: "User", foreign_key: :leader_id
+  belongs_to :leader_project, class_name: "User", foreign_key: :leader_id
 
   has_many :users, through: :project_users, dependent: :destroy
   has_many :project_users
