@@ -58,10 +58,13 @@ ActiveRecord::Schema.define(version: 20150630021641) do
   add_index "skill_users", ["skill_id"], name: "index_skill_users_on_skill_id", using: :btree
 
   create_table "skills", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "user_skill_id", limit: 4
+    t.string   "name",          limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
+
+  add_index "skills", ["user_skill_id"], name: "index_skills_on_user_skill_id", using: :btree
 
   create_table "team_users", force: :cascade do |t|
     t.integer  "team_id",    limit: 4
