@@ -21,6 +21,7 @@ group :test do
   gem "shoulda-matchers"
   gem "rspec-collection_matchers"
   gem "foundation-rails"
+  gem "capybara"
 end
 
 group :development, :test do

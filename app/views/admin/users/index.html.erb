@@ -3,7 +3,6 @@
 <button>
   <%= link_to t("user.new"), new_admin_user_path, class: "glyphicon glyphicon-plus" %>
 </button>
-<%= will_paginate %>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -15,9 +14,10 @@
       </tr>
     </thead>
     <tbody>
-      <%= render @users %>
+    <%= will_paginate @users%>
+      <%= render partial: "user", collection: @users %>
+    <%= will_paginate @users%>
     </tbody>
   </table>
 </div>
-<%= will_paginate %>
 <%= link_to t("csv.export"), admin_users_path(format: "csv"), class: "btn btn-success" %>
